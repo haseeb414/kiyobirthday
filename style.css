@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffe5ec, #ffffff);
+    font-family: 'Comic Sans MS', cursive;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #6c757d;
+}
+
+#timer {
+    font-size: 2em;
+    color: #e63946;
+    margin: 20px 0;
+}
+
+.msg {
+    font-size: 1.3em;
+    color: #444;
+}
+
+/* 🎂 Cake */
+.cake {
+    width: 200px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.layer {
+    height: 40px;
+    border-radius: 5px;
+    background: pink;
+    margin: 5px 0;
+}
+
+.layer1 { background: #ffadad; }
+.layer2 { background: #ffc6ff; }
+.layer3 { background: #bdb2ff; }
+
+.candles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.flame {
+    width: 10px;
+    height: 20px;
+    background: orange;
+    border-radius: 50% 50% 0 0;
+    animation: flicker 0.8s infinite;
+}
+
+@keyframes flicker {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(1.2); }
+    100% { transform: scaleY(1); }
+}
+
+/* 🎈 Balloons */
+.balloons {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    z-index: 0;
+}
+
+.balloon {
+    width: 40px;
+    height: 60px;
+    border-radius: 50% 50% 50% 50%;
+    background: red;
+    animation: float 4s ease-in-out infinite;
+    position: relative;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background: black;
+}
+
+.red { background: #ff4d6d; }
+.blue { background: #4dabf7; animation-delay: 1s; }
+.green { background: #69db7c; animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
